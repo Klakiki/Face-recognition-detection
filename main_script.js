@@ -49,7 +49,7 @@ video.addEventListener('play', async () => {
             const box = resizedDetections[i].detection.box // ตำแหน่งกรอบใบหน้า
             const expressions = resizedDetections[i].expressions // อารมณ์ที่ตรวจจับได้
             // อารมณ์ที่มีค่าความมั่นใจสูงสุด
-            const maxExpression = Object.keys(expressions).reduce((a, b) => expressions[a] > expressions[b] ? a : b) 
+            const maxExpression = Object.keys(expressions).reduce((a,b)=>expressions[a]>expressions[b]?a:b) 
 
             // สร้างข้อความที่จะแสดง (ชื่อ + อารมณ์)
             const label = `${result.toString()} - ${maxExpression}`
